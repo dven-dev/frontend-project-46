@@ -11,7 +11,7 @@
     "pre-push": "npx lint-staged"
   },
   "scripts": {
-    "test": "npx jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",
