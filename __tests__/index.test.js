@@ -12,8 +12,13 @@ const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8'
 describe('genDiff', () => {
   test('JSON format', () => {
   expect(genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'json'))
-    .toEqual(readFile('expected.txt').trim());
+    .toEqual(readFile('expectedJSON.txt').trim());
+});
+  test('YAML format', () => {
+  expect(genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'json'))
+    .toEqual(readFile('expectedYAML.txt').trim());
 });
 
 });
+
 
