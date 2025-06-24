@@ -15,9 +15,10 @@ describe('genDiff', () => {
     .toEqual(readFile('expectedJSON.txt').trim());
 });
   test('YAML format', () => {
-  expect(genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'json'))
+  expect(genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'yaml'))
     .toEqual(readFile('expectedYAML.txt').trim());
 });
+
 
 });
 

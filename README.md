@@ -7,5 +7,8 @@
 
 
 
-### Пример работы пакета
+### Пример сравнения файлов json
 [![asciicast](https://asciinema.org/a/zKb4LRxc7cLjn4qFLiq3Jxe8e.svg)](https://asciinema.org/a/zKb4LRxc7cLjn4qFLiq3Jxe8e)
+
+### Пример сравнения файлов yml
+[![asciicast](https://asciinema.org/a/7HzChf6WQcfjHwIRoS2N8ZY2B.svg)](https://asciinema.org/a/7HzChf6WQcfjHwIRoS2N8ZY2B)
