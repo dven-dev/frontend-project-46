@@ -1,4 +1,4 @@
-
+import yaml from 'js-yaml';
 
 const parsers = {
   json: JSON.parse,
