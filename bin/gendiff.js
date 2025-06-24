@@ -7,15 +7,13 @@ const program = new Command();
 
 program
   .name('gendiff')
+  .version('1.0.0')
   .description('Compares two configuration files and shows a difference.')
-  .version('0.0.1')
-  .argument('<filepath1>')
-  .argument('<filepath2>')
-  .option('-f, --format [type]', 'output format')
+  .option('-f, --format [type]', 'output format (default: "stylish")')
+  .arguments('<filepath1> <filepath2>')
   .action((filepath1, filepath2, options) => {
-    const result = genDiff(filepath1, filepath2);
-    console.log(result);
+    const diff = genDiff(filepath1, filepath2, options.format);
+    console.log(diff);
   });
 
-program.parse(process.argv);
-
+program.parse();

@@ -1,5 +1,14 @@
 export default {
   testEnvironment: 'node',
-  transform: {},
+  transform: {
+    '^.+\\.js$': 'babel-jest'
+  },
+  globals: {
+    'import.meta': {
+      url: 'file://'
+    }
+  }
 };
+
+
 
