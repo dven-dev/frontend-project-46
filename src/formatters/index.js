@@ -1,5 +1,5 @@
-import { formatStylish } from './stylish.js';
-import { formatPlain } from './plain.js';
+import formatStylish from './stylish.js';
+import formatPlain from './plain.js';
 
 const formatters = {
   stylish: formatStylish,
