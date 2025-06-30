@@ -19,3 +19,8 @@ jobs:
           node-version: '22'
       - run: npm ci
       - run: npm test
+      - name: Upload coverage report to QLTY
+        uses: qltysh/qlty-action/coverage@v1
+        with:
+          token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+          files: coverage/lcov.info

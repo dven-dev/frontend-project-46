@@ -11,7 +11,7 @@
     "pre-push": "npx lint-staged"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ."
