@@ -28,8 +28,8 @@ describe('genDiff', () => {
       genDiff(
         getFixturePath('file1.yml'),
         getFixturePath('file2.yml'),
-        'stylish';
-      );
+        'stylish',
+      ),
     ).toEqual(readFile('expectedStylish.txt').trim())
   })
 
@@ -38,8 +38,8 @@ describe('genDiff', () => {
       genDiff(
         getFixturePath('file1.yml'),
         getFixturePath('file2.yml'),
-        'plain';
-      );
+        'plain',
+      ),
     ).toEqual(readFile('expectedPlain.txt').trim())
   })
 })
