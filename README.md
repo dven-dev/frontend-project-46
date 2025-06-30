@@ -8,4 +8,4 @@
 
 
 ### Пример сравнения файлов
-[![asciicast](https://asciinema.org/a/7d0K8lgd1LIMZLdfvqRVfD8X0.svg)](https://asciinema.org/a/7d0K8lgd1LIMZLdfvqRVfD8X0)
+[![asciicast](https://asciinema.org/a/aFm3LbAYfxLTN2e1lANbR3KGs.svg)](https://asciinema.org/a/aFm3LbAYfxLTN2e1lANbR3KGs)
