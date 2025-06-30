@@ -1,4 +1,4 @@
-const stringify = value => {
+const stringify = (value) => {
   if (typeof value === 'object' && value !== null) {
     return '[complex value]'
   }
@@ -11,7 +11,7 @@ const stringify = value => {
 const formatPlain = (diff, parentPath = '') => {
   const lines = diff
     .filter(item => item.type !== 'unchanged')
-    .flatMap(item => {
+    .flatMap((item) => {
       const { key, type } = item
       const propertyPath = parentPath ? `${parentPath}.${key}` : key
 
