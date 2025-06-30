@@ -3,4 +3,4 @@ export default {
     '^.+\\.jsx?$': 'babel-jest',
   },
   testEnvironment: 'node',
-};
+}

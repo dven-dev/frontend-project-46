@@ -3,9 +3,9 @@ name: Node CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
@@ -19,4 +19,3 @@ jobs:
           node-version: '22'
       - run: npm ci
       - run: npm test
-
