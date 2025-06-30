@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 import { FlatCompat } from '@eslint/eslintrc'
 import pluginJs from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
+import prettier from 'eslint-config-prettier'
 
 // для __dirname и __filename в ESM
 const __filename = fileURLToPath(import.meta.url)
@@ -60,4 +61,5 @@ export default [
       'import/no-extraneous-dependencies': 'off',
     },
   },
+  prettier,
 ]
