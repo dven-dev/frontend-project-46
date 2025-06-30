@@ -13,5 +13,3 @@ export default (data, format) => {
   }
   return parse(data);
 };
-
-

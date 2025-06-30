@@ -16,5 +16,3 @@ const format = (diff, formatType = 'stylish') => {
 };
 
 export default format;
-
-

@@ -21,7 +21,9 @@ const stringify = (value, depth) => {
 const getStylish = (diffTree, depth = 1) => {
   const indent = getIndent(depth);
 
-  return diffTree.map(({ key, type, value, oldValue, newValue, children }) => {
+  return diffTree.map(({
+    key, type, value, oldValue, newValue, children,
+  }) => {
     switch (type) {
       case 'nested':
         return `${indent}  ${key}: {\n${getStylish(children, depth + 1)}\n${getIndentForBracket(depth)}}`;
