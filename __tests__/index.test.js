@@ -20,6 +20,12 @@ describe('genDiff', () => {
     .toEqual(readFile('expectedStylish.txt').trim());
 });
 
+  test('plain format', () => {
+  expect(genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'), 'plain'))
+    .toEqual(readFile('expectedPlain.txt').trim());
+});
+
+
 });
 
 
