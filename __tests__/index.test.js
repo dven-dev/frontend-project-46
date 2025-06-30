@@ -18,8 +18,8 @@ describe('genDiff', () => {
       genDiff(
         getFixturePath('file1.json'),
         getFixturePath('file2.json'),
-        'json'
-      )
+        'json';
+      );
     ).toEqual(readFile('expectedJSON.txt').trim())
   })
 
@@ -28,8 +28,8 @@ describe('genDiff', () => {
       genDiff(
         getFixturePath('file1.yml'),
         getFixturePath('file2.yml'),
-        'stylish'
-      )
+        'stylish';
+      );
     ).toEqual(readFile('expectedStylish.txt').trim())
   })
 
@@ -38,8 +38,8 @@ describe('genDiff', () => {
       genDiff(
         getFixturePath('file1.yml'),
         getFixturePath('file2.yml'),
-        'plain'
-      )
+        'plain';
+      );
     ).toEqual(readFile('expectedPlain.txt').trim())
   })
 })
