@@ -46,19 +46,19 @@ make install
 
 ## Примеры использования (Asciinema)
 
-- 🎬 Сравнение **JSON-файлов**  
+- Сравнение **JSON-файлов**
   https://asciinema.org/a/zKb4LRxc7cLjn4qFLiq3Jxe8e
 
-- 🎬 Сравнение **YAML-файлов**  
+- Сравнение **YAML-файлов**
   https://asciinema.org/a/7HzChf6WQcfjHwIRoS2N8ZY2B
 
-- 🎬 Сравнение **JSON и YAML**  
+- Сравнение **JSON и YAML**
   https://asciinema.org/a/7d0K8lgd1LIMZLdfvqRVfD8X0
 
-- 🎬 Формат вывода: **plain**  
+- Формат вывода: **plain**
   https://asciinema.org/a/aFm3LbAYfxLTN2e1lANbR3KGs
 
-- 🎬 Формат вывода: **json**  
+- Формат вывода: **json**
   https://asciinema.org/a/Cnc7QFZUSre8Plr7ElXdh6Gma
 
 ---
