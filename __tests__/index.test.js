@@ -19,7 +19,7 @@ describe('genDiff', () => {
         getFixturePath('file1.json'),
         getFixturePath('file2.json'),
         'json',
-      );
+      ),
     ).toEqual(readFile('expectedJSON.txt').trim())
   })
 
