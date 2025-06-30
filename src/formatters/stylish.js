@@ -1,7 +1,7 @@
-const indentSize = 4
+исправь const indentSize = 4
 
-const getIndent = depth => ' '.repeat(depth * indentSize - 2)
-const getIndentForBracket = depth => ' '.repeat(depth * indentSize)
+const getIndent = (depth) => ' '.repeat(depth * indentSize - 2)
+const getIndentForBracket = (depth) => ' '.repeat(depth * indentSize)
 
 const stringify = (value, depth) => {
   if (typeof value !== 'object' || value === null) {
@@ -38,3 +38,12 @@ const getStylish = (diffTree, depth = 1) => {
         case 'unchanged':
           return `${indent}  ${key}: ${stringify(value, depth)}`
         default:
+          throw new Error(`Unknown type: ${type}`)
+      }
+    })
+    .join('\n')
+}
+
+const formatStylish = (diffTree) => `{\n${getStylish(diffTree)}\n}`
+
+export default formatStylish
