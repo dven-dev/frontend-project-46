@@ -1,4 +1,4 @@
-const stringify = (value) => {
+const stringify = value => {
   if (typeof value === 'object' && value !== null) {
     return '[complex value]'
   }
@@ -10,8 +10,8 @@ const stringify = (value) => {
 
 const formatPlain = (diff, parentPath = '') => {
   const lines = diff
-    .filter((item) => item.type !== 'unchanged')
-    .flatMap((item) => {
+    .filter(item => item.type !== 'unchanged')
+    .flatMap(item => {
       const { key, type } = item
       const propertyPath = parentPath ? `${parentPath}.${key}` : key
 
@@ -23,7 +23,7 @@ const formatPlain = (diff, parentPath = '') => {
         case 'changed':
           return `Property '${propertyPath}' was updated. From ${stringify(item.oldValue)} to ${stringify(item.newValue)}`
         case 'nested':
-          return formatPlain(item.children, propertyPath) // рекурсивный спуск
+          return formatPlain(item.children, propertyPath)
         default:
           throw new Error(`Unknown type: ${type}`)
       }
