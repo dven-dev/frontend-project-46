@@ -78,8 +78,8 @@ describe('parsers', () => {
       follow: false,
     }
 
-    expect(parse(jsonData, '.json')).toEqual(expected)
-    expect(parse(ymlData, '.yml')).toEqual(expected)
+    expect(parse(jsonData, 'json')).toEqual(expected)
+    expect(parse(ymlData, 'yml')).toEqual(expected)
   });
 
   test('throws on unknown format', () => {
