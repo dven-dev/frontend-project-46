@@ -63,7 +63,7 @@ describe('formatters', () => {
   })
 
   test('formatJson', () => {
-    expect(formatJson(diff)).toEqual(readFile('expectedJSON.txt').trim())
+    expect(format(diff)).toEqual(readFile('expectedJSON.txt').trim())
   })
 })
 
@@ -103,10 +103,10 @@ describe('buildDiff', () => {
 
     const diff = buildDiff(before, after)
     expect(diff).toEqual([
-      { key: 'follow', type: 'removed', value: false },
+      { key: 'follow', type: 'deleted', value: false },
       { key: 'host', type: 'unchanged', value: 'hexlet.io' },
-      { key: 'proxy', type: 'removed', value: '123.234.53.22' },
-      { key: 'timeout', type: 'changed', value1: 50, value2: 20 },
+      { key: 'proxy', type: 'deleted', value: '123.234.53.22' },
+      { key: 'timeout', type: 'changed', oldValue: 50, newValue: 20 },
       { key: 'verbose', type: 'added', value: true },
     ])
   })
