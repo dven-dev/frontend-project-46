@@ -43,7 +43,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Run SonarQube scan
+      - name: SonarQube scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
