@@ -80,7 +80,7 @@ describe('parsers', () => {
 
     expect(parse(jsonData, 'json')).toEqual(expected)
     expect(parse(ymlData, 'yml')).toEqual(expected)
-  });
+  })
 
   test('throws on unknown format', () => {
     expect(() => parse('{}', '.txt')).toThrow()
