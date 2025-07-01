@@ -66,3 +66,23 @@ describe('formatters', () => {
     expect(formatJson(diff)).toEqual(readFile('expectedJSON.txt').trim())
   })
 })
+
+describe('parsers', () => {
+  test('parse JSON and YAML correctly', () => {
+    const jsonData = readFile('file1.json')
+    const ymlData = readFile('file1.yml')
+    const expected = {
+      host: 'hexlet.io',
+      timeout: 50,
+      proxy: '123.234.53.22',
+      follow: false,
+    }
+
+    expect(parse(jsonData, '.json')).toEqual(expected)
+    expect(parse(ymlData, '.yml')).toEqual(expected)
+  });
+
+  test('throws on unknown format', () => {
+    expect(() => parse('{}', '.txt')).toThrow()
+  })
+})
