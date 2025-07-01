@@ -1,19 +1,15 @@
-# .github/workflows/test.yml
 name: Node CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
     types: [opened, synchronize, reopened]
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -33,15 +29,21 @@ jobs:
           files: coverage/lcov.info
 
   sonarqube:
-    name: SonarQube
+    needs: test
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Disable shallow clone for better Sonar analysis
+          fetch-depth: 0
 
-      - name: SonarQube Scan
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - run: npm ci
+
+      - name: Run SonarQube scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
