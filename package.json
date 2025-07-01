@@ -61,8 +61,4 @@
     "lodash": "^4.17.21",
     "path": "^0.12.7"
   },
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": ["lcov", "text"]
-  }
 }
