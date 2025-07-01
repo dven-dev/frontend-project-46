@@ -11,6 +11,7 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=dven-dev_frontend-project-46&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=dven-dev_frontend-project-46)
 [![Maintainability](https://qlty.sh/badges/16633dfc-1f68-4f5f-bde2-7ce93d9bf3e0/maintainability.svg)](https://qlty.sh/gh/dven-dev/projects/frontend-project-46)
 [![Code Coverage](https://qlty.sh/badges/16633dfc-1f68-4f5f-bde2-7ce93d9bf3e0/test_coverage.svg)](https://qlty.sh/gh/dven-dev/projects/frontend-project-46)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=dven-dev_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=dven-dev_frontend-project-46)
 
 ---
 
