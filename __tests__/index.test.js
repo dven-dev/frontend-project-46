@@ -86,3 +86,28 @@ describe('parsers', () => {
     expect(() => parse('{}', '.txt')).toThrow()
   })
 })
+
+describe('buildDiff', () => {
+  test('returns correct diff object', () => {
+    const before = {
+      host: 'hexlet.io',
+      timeout: 50,
+      proxy: '123.234.53.22',
+      follow: false,
+    }
+    const after = {
+      timeout: 20,
+      verbose: true,
+      host: 'hexlet.io',
+    }
+
+    const diff = buildDiff(before, after)
+    expect(diff).toEqual([
+      { key: 'follow', type: 'removed', value: false },
+      { key: 'host', type: 'unchanged', value: 'hexlet.io' },
+      { key: 'proxy', type: 'removed', value: '123.234.53.22' },
+      { key: 'timeout', type: 'changed', value1: 50, value2: 20 },
+      { key: 'verbose', type: 'added', value: true },
+    ])
+  })
+})
