@@ -73,7 +73,6 @@ describe('parsers', () => {
     const ymlData = readFile('file1.yml')
     const expected = JSON.parse(readFile('file1.json'))
 
-
     expect(parse(jsonData, 'json')).toEqual(expected)
     expect(parse(ymlData, 'yml')).toEqual(expected)
   })
