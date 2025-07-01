@@ -63,7 +63,7 @@ describe('formatters', () => {
   })
 
   test('formatJson', () => {
-    expect(format(diff)).toEqual(readFile('expectedJSON.txt').trim())
+    expect(format(diff, 'json')).toEqual(readFile('expectedJSON.txt').trim())
   })
 })
 
