@@ -50,8 +50,8 @@ describe('genDiff', () => {
 })
 
 describe('formatters', () => {
-  const parsed1 = parse(readFile('file1.json'), '.json')
-  const parsed2 = parse(readFile('file2.json'), '.json')
+  const parsed1 = parse(readFile('file1.json'), 'json')
+  const parsed2 = parse(readFile('file2.json'), 'json')
   const diff = buildDiff(parsed1, parsed2)
 
   test('formatStylish', () => {
