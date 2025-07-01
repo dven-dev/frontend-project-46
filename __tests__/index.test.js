@@ -6,7 +6,7 @@ import buildDiff from '../src/buildDiff.js'
 import parse from '../src/parsers.js'
 import formatStylish from '../src/formatters/stylish.js'
 import formatPlain from '../src/formatters/plain.js'
-import formatJson from '../src/formatters/json.js'
+import format from '../src/formatters/index.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
