@@ -77,8 +77,8 @@ describe('formatters', () => {
   })
 
   test('format throws on unknown formatter', () => {
-  const diff = buildDiff({}, {})
-    expect(() => format(diff, 'unsupported')).toThrow()
+  const emptyDiff = buildDiff({}, {})
+    expect(() => format(emptyDiff, 'unsupported')).toThrow()
   })
 })
 
