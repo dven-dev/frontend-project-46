@@ -75,6 +75,11 @@ describe('formatters', () => {
   test('formatJson', () => {
     expect(format(diff, 'json')).toEqual(readFile('expectedJSON.txt').trim())
   })
+
+  test('format throws on unknown formatter', () => {
+  const diff = buildDiff({}, {})
+    expect(() => format(diff, 'unsupported')).toThrow()
+  })
 })
 
 describe('parsers', () => {
