@@ -49,14 +49,14 @@ describe('genDiff', () => {
   })
 
   test('unknown format', () => {
-  expect(() => {
-    genDiff(
-      getFixturePath('file1.json'),
-      getFixturePath('file2.json'),
-      'lol'
-    )
-  }).toThrow()
-})
+    expect(() => {
+      genDiff(
+        getFixturePath('file1.json'),
+        getFixturePath('file2.json'),
+        'lol',
+      )
+    }).toThrow()
+  })
 })
 
 describe('formatters', () => {
@@ -117,10 +117,10 @@ describe('buildDiff', () => {
   })
 
   test('correctly handles empty files', () => {
-  const empty1 = {}
-  const empty2 = {}
+    const empty1 = {}
+    const empty2 = {}
 
-  const diff = buildDiff(empty1, empty2)
-  expect(diff).toEqual([])
-})
+    const diff = buildDiff(empty1, empty2)
+    expect(diff).toEqual([])
+  })
 })
