@@ -1,10 +1,12 @@
+import _ from 'lodash'
+
 const indentSize = 4
 
 const getIndent = depth => ' '.repeat(depth * indentSize - 2)
 const getIndentForBracket = depth => ' '.repeat(depth * indentSize)
 
 const stringify = (value, depth) => {
-  if (typeof value !== 'object' || value === null) {
+  if (!_.isPlainObject(value)) {
     return String(value)
   }
 
